@@ -1,6 +1,23 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
+    id 'maven-publish'
+}
+group = 'com.github.biwankaifa'
+version = '1.0'
+
+afterEvaluate {
+    publishing {
+        publications {
+            // Creates a Maven publication called "release".
+            release(MavenPublication) {
+                from components.release
+                groupId = 'com.github.biwankaifa'
+                artifactId = 'ry-live-ad'
+                version = '1.0'
+            }
+        }
+    }
 }
 
 android {
