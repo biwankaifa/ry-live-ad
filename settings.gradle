@@ -1,0 +1,22 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        //添加仓库地址 start
+        maven { url 'https://jitpack.io' }
+        jcenter()
+        //添加仓库地址 end
+        google()
+        mavenCentral()
+
+    }
+}
+rootProject.name = "RyLiveSdk"
+include ':app'
+include ':rylive'
